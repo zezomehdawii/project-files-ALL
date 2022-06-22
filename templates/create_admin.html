@@ -1,0 +1,40 @@
+{% extends "base.html" %}{% block content%}
+<p>{{msg}}</p>
+<!DOCTYPE html>
+<html lang="en">
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static' , filename='input.css')}}">
+
+
+</head>
+
+<body>
+    <form action="#" method="post">
+
+        <div class="page ">
+            <div class="heading">
+                <h1>Create Admin</h1>
+            </div>
+            <form class="w3-container">
+                <p>
+                    <input class="w3-input" type="text" id="username" name="username" placeholder="">
+                    <label>Username</label></p>
+                <p>
+                    <input class="w3-input" type="password" id="password" name="password" placeholder="">
+                    <label>Password</label></p>
+            </form>
+            <label class="btns">
+            <button type="submit" class="btn btn-confirm">Create</button>
+            <button type="reset" class="btn btn-cancel">Cancel</button>
+        </label>
+
+    </form>
+    </div>
+</body>
+
+</html>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html"%}{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="{{ url_for('static' , filename='style.css')}}">
+
+
+</head>
+
+<body>
+
+    <pre style="font-size: 150%;"> {{ content }} </pre>
+
+</body>
+
+</html>
+{% endblock %}

@@ -1,0 +1,45 @@
+ {% extends "base.html"%}{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static' , filename='input.css')}}">
+
+
+</head>
+
+<body>
+    <form action="#" method="get">
+
+        <div class="page ">
+            <div class="heading">
+                <h1>Add device</h1>
+            </div>
+            <div class="loader" style="margin-left: -10%">
+
+            </div>
+            <h1 style="margin-top: -10%;font-size:150% ;font-family: 'Courier New', Courier, monospace;"> Waiting for device to be connected!</h1>
+            <p> IP address: {{ip}} and MAC address: {{mac}} </p>
+            <!-- <p> this is ip: {% set ip = ip_src %}</p> -->
+            <label for="deviceName" class="field field_v2">
+            <input type="text" class="field__input" id="deviceName" name="deviceName"placeholder="">
+            <span class="field__label-wrap">
+              <span class="field__label">Enter Device Name</span>
+            </span>
+          </label>
+
+
+            <label class="btns">
+            <input type="button" id="script" class="btn btn-confirm" name="submit" value="Run Script"></button>
+            <input type = "submit" value = "submit" />
+            <button type="reset" class="btn btn-cancel">Cancel</button>
+        </label>
+
+        </div>
+    </form>
+
+</body>
+
+</html>
+{% endblock %}
+<!-- if device detected make field editable and disapper the loader -->

@@ -1,0 +1,51 @@
+{% extends "base.html"%}{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static' , filename='input.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static' , filename='table.css')}}">
+
+
+
+</head>
+
+<body>
+
+    <form action="#" method="get">
+
+        <div class="page">
+            <div class="heading">
+                <h1>Display devices</h1>
+
+            </div>
+
+            </label>
+
+        </div>
+        <table style="width:95%; height: auto;  ">
+            <thead>
+                <tr>
+                    {% for header in headings %}
+                    <th> {{header}} </th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in info_array %}
+                <tr>
+                    {% for cell in row %}
+                    <td>{{cell}} </td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+
+                <tr>
+            </tbody>
+        </table>
+    </form>
+
+</body>
+
+</html>
+{% endblock %}
